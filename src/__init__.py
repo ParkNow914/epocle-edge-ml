@@ -7,10 +7,13 @@ __author__ = "AI Agent"
 
 from .numpy_nn import SimpleMLP
 from .optimizer import SGD, Adam, RMSprop
+from .replay_buffer import ReplayBuffer, PrioritizedReplayBuffer
 
 __all__ = [
     "SimpleMLP",
     "SGD", 
     "Adam",
-    "RMSprop"
+    "RMSprop",
+    "ReplayBuffer",
+    "PrioritizedReplayBuffer"
 ]
