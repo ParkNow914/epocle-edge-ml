@@ -8,6 +8,7 @@ __author__ = "AI Agent"
 from .numpy_nn import SimpleMLP
 from .optimizer import SGD, Adam, RMSprop
 from .replay_buffer import ReplayBuffer, PrioritizedReplayBuffer
+from .ewc import EWC, OnlineEWC, compute_fisher_diag, compute_ewc_loss, analyze_parameter_importance
 
 __all__ = [
     "SimpleMLP",
@@ -15,5 +16,10 @@ __all__ = [
     "Adam",
     "RMSprop",
     "ReplayBuffer",
-    "PrioritizedReplayBuffer"
+    "PrioritizedReplayBuffer",
+    "EWC",
+    "OnlineEWC",
+    "compute_fisher_diag",
+    "compute_ewc_loss",
+    "analyze_parameter_importance"
 ]
