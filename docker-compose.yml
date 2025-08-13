@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  epocle-edge-ml:
+    build: .
+    container_name: epocle-edge-ml
+    volumes:
+      - ./artifacts:/app/artifacts
+      - ./data:/app/data
+      - ./src:/app/src
+      - ./tests:/app/tests
+      - ./examples:/app/examples
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    working_dir: /app
+    command: python -m pytest tests/ -v
+    
+  epocle-edge-ml-dev:
+    build: .
+    container_name: epocle-edge-ml-dev
+    volumes:
+      - ./artifacts:/app/artifacts
+      - ./data:/app/data
+      - ./src:/app/src
+      - ./tests:/app/tests
+      - ./examples:/app/examples
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    working_dir: /app
+    command: python examples/train_online.py --help
+    profiles:
+      - dev

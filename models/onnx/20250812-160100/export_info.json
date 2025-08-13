@@ -1,0 +1,64 @@
+{
+  "model_type": "reptile",
+  "model_name": "reptile_mlp",
+  "export_timestamp": "20250812-160100",
+  "model_info": {
+    "input_shape": [
+      16,
+      20
+    ],
+    "output_shape": [
+      16,
+      3
+    ],
+    "input_names": [
+      "input"
+    ],
+    "output_names": [
+      "output"
+    ],
+    "opset_version": 11,
+    "export_time": 0.06302881240844727,
+    "model_size_mb": 0.02263641357421875,
+    "onnx_ir_version": 6,
+    "producer_name": "pytorch",
+    "producer_version": "2.8.0"
+  },
+  "input_shape": [
+    16,
+    20
+  ],
+  "args": {
+    "model_type": "reptile",
+    "reptile_path": "artifacts/20250812-155630/reptile_model.pth",
+    "input_dim": 20,
+    "hidden_dim": 64,
+    "num_classes": 3,
+    "batch_size": 16,
+    "opset": 11,
+    "out_dir": "models/onnx",
+    "benchmark": true,
+    "verify": true,
+    "seed": 42
+  },
+  "verification": {
+    "is_correct": "True",
+    "max_difference": "2.9802322e-08",
+    "mean_difference": "1.0293054e-08",
+    "tolerance": 1e-05,
+    "pytorch_output_shape": [
+      16,
+      3
+    ],
+    "onnx_output_shape": [
+      16,
+      3
+    ]
+  },
+  "benchmark": {
+    "pytorch_time_ms": 0.2500176429748535,
+    "onnx_time_ms": 0.034258365631103516,
+    "speedup": 7.298002644582088,
+    "num_runs": 100
+  }
+}
