@@ -1,3 +1,0 @@
-[33m0e48716[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32msprint-01/numpy-nn[m[33m)[m test: fix optimizer convergence tests to be more realistic
-[33m22ee5f5[m feat(numpy): add SimpleMLP forward/backprop and optimizers
-[33mbfdfabe[m[33m ([m[1;32msprint-00/init[m[33m)[m chore: init repo structure
